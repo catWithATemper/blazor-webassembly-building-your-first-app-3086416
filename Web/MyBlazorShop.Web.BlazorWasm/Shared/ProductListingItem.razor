@@ -1,5 +1,6 @@
 ﻿@using MyBlazorShop.Libraries.Services.Product.Models;
 @using MyBlazorShop.Libraries.Services.ShoppingCart;
+@implements IProductAddToCart
 @inject IShoppingCartService shoppingCartService
 @if (Product != null)
 {

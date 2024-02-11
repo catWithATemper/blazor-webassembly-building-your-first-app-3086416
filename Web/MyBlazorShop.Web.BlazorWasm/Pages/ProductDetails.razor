@@ -68,7 +68,9 @@
     public string? Slug { get; set; }
 
     public IList<ProductModel>? AllProducts { get; set; }
+}
 
+@functions {
     protected override void OnInitialized()
     {
         AllProducts = productService.GetAll();
@@ -81,7 +83,7 @@
         if (!string.IsNullOrWhiteSpace(Slug))
         {
             Product = productService.GetBySlug(Slug);
-        }        
+        }
     }
 
     public void AddToCart()
@@ -92,4 +94,5 @@
             Quantity = null;
         }
     }
+
 }
